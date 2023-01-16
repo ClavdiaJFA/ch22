@@ -1,0 +1,45 @@
+.app {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+.calculadora {
+  align-items: center;
+  background-color: #22252D;
+	width: 100%;
+	max-width: 320px;
+	min-height: 400px;
+	display: flex;
+	flex-direction: column;
+	border-radius: 1.2rem;
+  border: thin solid black;
+}
+
+  .btn {
+    width: 60px;
+    height: 52px;
+    margin: 5px;
+    box-shadow: 1px 1px 1px #000;
+  }
+
+  .clear {
+    width: 130px;
+  }
+
+  .enter {
+    height: 110px;
+  }
+
+  .zero {
+    width: 130px;
+    margin-left: -66px;
+  }
+  .resultado {
+    text-align: right;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    box-shadow: 1px 1px 1px #000;
+  }
