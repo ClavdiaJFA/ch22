@@ -37,3 +37,25 @@ const cambiarColorEm = ( nuevoColor) => {
         
 }
 cambiarColorEm("blue");
+
+const encontrarElementoByQuerySelector = () =>{
+  const element = document.querySelector("span");
+  console.log(element?.innerText);
+}
+encontrarElementoByQuerySelector();
+
+const crearElemento = () => {
+  const newElement = document.createElement("p");
+  newElement.innerHTML = `La Ch2 es bien <strong>chida</strong> por
+  <ul>
+  <li>Diversas</li>
+  <li>Cholos</li>
+  <li>Hay clases de bienes raíces</li>
+  <li>Amigables</li>
+  <li>La ch22 te respalda</li>
+  <li>Sin problemas en quesadillas</li>
+  <li>Aplican el dicho: Haz compitas, no compitas</li>
+  </ul>
+  `;
+  document.getElementById("").appendChild(newElement)
+}
