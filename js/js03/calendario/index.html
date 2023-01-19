@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <title>Calendario</title>
+  </head>
+
+  <body>
+     <!-- current day-->
+    <p>Hoy es:</p>
+        <div id="current_date"></p>
+            <script>
+            date = new Date();
+            year = date.getFullYear();
+            month = date.getMonth() + 1;
+            day = date.getDate();
+            document.getElementById("current_date").innerHTML = day + "/" + month + "/" + year;
+            </script>
+      </div>
+      <p></p>
+      <p>Ahora elige la fecha:</p>
+      
+      <div class="p-3 mb-2 bg-primary text-white">
+      <form>
+        <div class="row">
+            <!-- day-->
+          <div class="col-sm">
+            
+            <label for="day">Día</label>
+            <input
+              min="1"
+              max="31"
+              type="number"
+              id="day"
+              name="day"
+              class="form-control"
+              placeholder="Dia"
+            />
+          </div>
+          <!-- month -->
+          <div class="col-sm">
+            
+            <label for="month">Mes</label>
+            <select id="month" name="month" class="form-control" placeholder="Mes">
+              <option value="0">Enero</option>
+              <option value="1">Febrero</option>
+              <option value="2">Marzo</option>
+              <option value="3">Abril</option>
+              <option value="4">Mayo</option>
+              <option value="5">Junio</option>
+              <option value="6">Julio</option>
+              <option value="7">Agosto</option>
+              <option value="8">Septiembre</option>
+              <option value="9">Octubre</option>
+              <option value="10">Noviembre</option>
+              <option value="11">Diciembre</option>
+            </select>
+          </div>
+           <!-- year -->
+          <div class="col-sm">
+           
+            <label for="year">Año</label>
+            <select id="year" name="year" class="form-control" placeholder="Año">
+                <option value="0">2023</option>
+                <option value="1">2024</option>
+                <option value="2">2025</option>
+                <option value="3">2026</option>
+                <option value="4">2027</option>
+                <option value="5">2028</option>
+                <option value="6">2029</option>
+                <option value="7">2030</option>
+                <option value="8">2031</option>
+                <option value="9">2032</option>
+                <option value="10">2033</option>
+                <option value="12">2034</option>
+                <option value="13">2035</option>
+                <option value="14">2036</option>
+                <option value="15">2037</option>
+              </select>
+          </div>
+        </div>
+      </form>
+      
+      <div class="row">
+        <div class="d-flex justify-content-center">
+          <button onclick="restOrWork()" class="btn btn-secondary">
+            Descubre si te toca descansar o trabajar
+          </button>
+        </div>
+        <p></p>
+      </div>
+      <p id="result" class="text-center">El oráculo te dará la respuesta 🔮</p>
+    </div>
+
+    <script>
+      const extractValues = () => {
+        let day = document.getElementById("day").value;
+        let month = document.getElementById("month").value;
+        let year = document.getElementById("year").value;
+        return [year, month, day];
+      };
+      const restOrWork = () => {
+        const [year, month, day] = extractValues();
+        let date = new Date(year, month, day).getDay();
+        switch (date) {
+          case 0:
+            return (document.getElementById("result").innerHTML =
+              "Domingo de Netflix and chill 🍿");
+          case 1:
+            return (document.getElementById("result").innerHTML =
+              "Lunes otra vez 😖");
+          case 2:
+            return (document.getElementById("result").innerHTML =
+              "Martes, sobreviviendo 🤙");
+          case 3:
+            return (document.getElementById("result").innerHTML =
+              "Ombligo de semana 👀");
+          case 4:
+            return (document.getElementById("result").innerHTML =
+              "Juebebes 🍺");
+          case 5:
+            return (document.getElementById("result").innerHTML =
+              "Friday I'm in love 💃​");
+          case 6:
+            return (document.getElementById("result").innerHTML =
+              "Sábado social 🎉");
+        }
+      };
+    </script>
+  </body>
+</html>

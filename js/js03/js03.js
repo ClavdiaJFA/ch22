@@ -1,6 +1,6 @@
 console.log("Sesión JS03");
 
-const datosUsuario = {nombre:"Jessica" , ciudad:"CDmx"};
+const datosUsuario = {nombre:"Jessica" , ciudad:"CDMX"};
 
 //Declaración de bloque.
 {
