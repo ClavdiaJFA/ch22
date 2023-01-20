@@ -39,7 +39,7 @@ console.log(procesoReducido);
 */
 
 const filtrarArreglo = ( datos ) =>{
-    const solucion = new Promise( (resolve, reject)=>{
+    return new Promise( (resolve, reject)=>{
         const procesoReducido = datos
             .map( element => element * 2)
             .filter(number => number>5);
@@ -48,7 +48,7 @@ const filtrarArreglo = ( datos ) =>{
         else
             reject("Tu arreglo no contiene números mayores a 5");
     });
-    return solucion;
+    //return solucion;
 }
 
 filtrarArreglo([2,4,7])
@@ -58,3 +58,35 @@ filtrarArreglo([2,4,7])
 filtrarArreglo([2,1,0])
     .then( response=> console.log(response))
     .catch( error=> console.warn(error) );
+
+    function filtrarConPromesa(){
+        filtrarArreglo([2,4,7])
+            .then( response=> console.log(response))
+            .catch( error=> console.warn(error) );
+
+filtrarArreglo([2,1,0])
+            .then( response=> console.log(response))
+            .catch( error=> console.warn(error) );
+
+    }
+    filtrarConPromesa();
+
+    //Consumiendo las promesas las promesas con Async y 
+    async function filtrarPromesaConAwaitTryCatch(){
+        try{
+            //En este bloque se tratará de resolver la promesa
+            console.log("Función con async y await, con try y catch");
+            console.log( await filtrarArreglo([1,0,1,2]) ); 
+            
+        }
+        catch(error){
+            //En este bloque se tratará el reject que genere la promesa
+            console.log("nooo, se va a acabar el mundo")
+            console.warn(error);
+        }
+        finally{
+            console.log("Termina la función con async y await");
+        }
+    }
+    filtrarPromesaConAwaitTryCatch();
+    
