@@ -26,7 +26,7 @@ Tipos de datos Object:
 
 */
 
-let myObject = {clave: "valor", edad: 18, 5:5};
+/*let myObject = {clave: "valor", edad: 18, 5:5};
 console.log( myObject.edad );
 const propiedad = 'edad';
 console.log( myObject[ propiedad ] );
@@ -41,5 +41,5 @@ console.log( myObject['5']  );
 //conversione sde datos de number a string
  //(1025).toString( radix );
 
-
+ var miUsuario = {nombre: "Laura" edad: 27}
 

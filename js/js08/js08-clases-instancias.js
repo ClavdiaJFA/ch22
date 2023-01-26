@@ -54,3 +54,25 @@ const grabadora = new ProductoElectronico(
 karlaArena.agregarProductoACarrito( grabadora);
 
 console.log(karlaArena.imprimirDatos());
+//[2, 4, 5].slice(2);//[4, 5]
+
+/*
+fetch()
+    .then(response => response.json())
+    .catch();
+    */
+
+const datoJson = `{
+    "name":"morpheus",
+    "job":"leader",
+    "skills":[
+       "KunFu",
+       "Capitan"
+    ],
+    "tripulacion":{
+       "operador":"Tanque",
+       "elegido":"Neo"
+    },
+    "vivo":true,
+    "edad":45
+ }`;
