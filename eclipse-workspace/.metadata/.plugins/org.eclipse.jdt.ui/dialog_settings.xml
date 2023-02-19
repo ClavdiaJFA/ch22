@@ -40,4 +40,7 @@
 		<item key="width" value="600"/>
 		<item key="height" value="400"/>
 	</section>
+	<section name="ClasspathContainerSelectionPage">
+		<item key="index" value="4"/>
+	</section>
 </section>
